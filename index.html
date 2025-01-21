@@ -1,0 +1,1647 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+-->
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    {% if content.html_title %}<title>{{ content.html_title }}</title>{% endif %}
+    <meta name="description" content="{{ content.meta_description }}">
+    {% if brand_settings.primaryFavicon.src %}
+    <link rel="shortcut icon" href="{{ brand_settings.primaryFavicon.src }}" />
+    {% endif %}
+    {{ standard_header_includes }}
+    <link rel="stylesheet" href="{{ get_asset_url('/crf-test-2/styles/utilities.css')}}">
+    <link rel="stylesheet" href="{{ get_asset_url('/crf-test-2/styles/common.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Petrona:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    {% block header %}
+    {% global_partial path="./partials/header.html" %}
+    {% endblock header %}
+    <main class="h-full">
+        <section class="bg-cf-gradient pb-[130px] px-4">
+            <section class="max-w-[1091px] mx-auto pt-5 mb-5 lg:pt-[94px] lg:mb-[119px]">
+                <h1 class="lg:text-[48px] lg:leading-[58px] text-4xl font-semibold text-white">Choose the best plan for
+                    your
+                    business</h1>
+                <p class="lg:text-[19px] lg:leading-[29px] text-md leading-6 mt-[15px] mb-[30px] text-white ">
+                    Find
+                    the perfect
+                    plan to your
+                    organization's
+                    production
+                    volume and needs</p>
+                <div class="flex flex-col gap-[22px] items-start">
+                    <div class="flex items-center justify-start">
+                        <h3
+                            class="text-white px-[14px] py-[5px] border border-cf-purple rounded-lg mr-[22px] text-xs lg:text-md">
+                            Estimation
+                        </h3>
+                        <p class="text-white">I deliver <span
+                                class="rounded-lg bg-cf-light-white lg:py-[8px] lg:px-[12px] px-2 py-1">10,000</span>
+                            final assets yearly
+                        </p>
+                        <img class="pl-[8px]" src="{{ get_asset_url('/crf-test-2/assets/svgs/info_ball.svg')}}"
+                            alt="information" />
+                    </div>
+
+                    <div class="relative w-full">
+                        <input id="labels-range-input" type="range" value="1" min="1" max="13"
+                            class="w-full h-3 rounded-lg appearance-none cursor-pointer bg-gradient-to-r max-w-[1061px]"
+                            oninput="updateRangeBackground(this)" />
+
+                        <div id="range-labels"
+                            class="absolute lg:bottom-[-80%] top-[80%] flex w-full px-1 max-w-[1061px]">
+                            <span class="lg:min-w-[70px] min-w-[26%] md:min-w-[33%]"></span>
+                            <span class="text-white text-[12px] lg:min-w-[85px] mt-2 hidden lg:block">$10,000</span>
+                            <span class="text-white text-[12px] lg:min-w-[85px] mt-2 hidden lg:block">$20,000</span>
+                            <span class="text-white text-[12px] lg:min-w-[85px] mt-2 hidden lg:block">$30,000</span>
+                            <span class="text-white text-[12px] lg:min-w-[90px] mt-2 hidden lg:block">$40,000</span>
+                            <span class="text-white text-[12px] lg:min-w-[85px] min-w-[30%] mt-2">$50,000</span>
+                            <span class="text-white text-[12px] lg:min-w-[85px] mt-2 hidden lg:block">$60,000</span>
+                            <span class="text-white text-[12px] lg:min-w-[85px] mt-2 hidden lg:block">$70,000</span>
+                            <span class="text-white text-[12px] lg:min-w-[95px] mt-2 hidden lg:block">$80,000</span>
+                            <span class="text-white text-[12px] lg:min-w-[85px] min-w-[30%] mt-2">$100,000</span>
+                            <span class="text-white text-[12px] lg:min-w-[85px] mt-2 hidden lg:block">$150,000</span>
+                            <span class="text-white text-[12px] lg:min-w-[85px] mt-2 hidden lg:block">$200,000</span>
+                            <span class="text-white text-[12px] lg:min-w-[85px] min-w-[30%] mt-2 truncate">Talk to
+                                sales</span>
+                        </div>
+
+                        <div
+                            class="absolute lg:top-[34%] top-[30%] flex lg:gap-[79px] gap-[30%] md:gap-[32%] w-full px-1 max-w-[1061px]">
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/dot.svg')}}" alt="dot"
+                                class="w-[8px] h-[8px] rounded-full z-0 hidden lg:inline-block" />
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/dot.svg')}}" alt="dot"
+                                class="w-[8px] h-[8px] rounded-full z-0 hidden lg:inline-block" />
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/dot.svg')}}" alt="dot"
+                                class="w-[8px] h-[8px] rounded-full z-0 hidden lg:inline-block" />
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/dot.svg')}}" alt="dot"
+                                class="w-[8px] h-[8px] rounded-full z-0 hidden lg:inline-block" />
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/dot.svg')}}" alt="dot"
+                                class="w-[8px] h-[8px] rounded-full z-0" />
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/dot.svg')}}" alt="dot"
+                                class="w-[8px] h-[8px] rounded-full z-0 hidden lg:inline-block" />
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/dot.svg')}}" alt="dot"
+                                class="w-[8px] h-[8px] rounded-full z-0 hidden lg:inline-block" />
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/dot.svg')}}" alt="dot"
+                                class="w-[8px] h-[8px] rounded-full z-0 hidden lg:inline-block" />
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/dot.svg')}}" alt="dot"
+                                class="w-[8px] h-[8px] rounded-full z-0" />
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/dot.svg')}}" alt="dot"
+                                class="w-[8px] h-[8px] rounded-full z-0" />
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/dot.svg')}}" alt="dot"
+                                class="w-[8px] h-[8px] rounded-full z-0 hidden lg:inline-block" />
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/dot.svg')}}" alt="dot"
+                                class="w-[8px] h-[8px] rounded-full z-0 hidden lg:inline-block" />
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/dot.svg')}}" alt="dot"
+                                class="w-[8px] h-[8px] rounded-full z-0" />
+                        </div>
+                    </div>
+                    <div class="!hidden lg:!flex">
+                        <div
+                            class="flex items-center justify-between gap-[21px] lg:mt-[79px] mt-[20px] overflow-hidden">
+                            <div
+                                class="flex flex-col items-start px-[39px] py-[32px] bg-white rounded-2xl max-w-[340px] min-h-[672px]">
+                                <h2 class="text-[32px] font-semibold text-cf-blue">Starter</h2>
+                                <p class="text-[15px] leading-[22px] pt-[18px] pb-[6px]">Starts at</p>
+                                <div class="flex items-center gap-[11px]">
+                                    <h2 class="text-[52px] leading-[54px] font-semibold plan-price">$2,400</h2>
+                                    <p class="text-[15px] leading-[22px] text-light-gray min-w-[86px] truncate">/month
+                                        <br /> billed
+                                        yearly</p>
+                                </div>
+                                <p class="text-[15px] leading-[22px] pt-[23px] pb-[18px]">For retailers of all sizes.
+                                    Get started with
+                                    workflow automation and get
+                                    benefits from day one.</p>
+                                <button
+                                    class="px-[30px] py-[15px] font-semibold text-white rounded-2xl mb-[21px] bg-cf-blue transition-colors hover:bg-cf-blue-hover">GET
+                                    A
+                                    QUOTE</button>
+                                <div class="flex flex-col">
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px] font-bold">Unlimited Users</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Images, Video & Copy</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Digital Style Guides</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Workflow Automation</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Metadata Enrichment</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Sample Management</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">File Automation</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Asset Hub</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">API & Webhooks</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">All Connectors</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Standard Reporting</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Email Support</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Online Academy</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col items-start px-[39px] py-[32px] bg-white rounded-2xl max-w-[340px] min-h-[672px]">
+                                <h2 class="text-[32px] font-semibold text-cf-blue">Core</h2>
+                                <p class="text-[15px] leading-[22px] pt-[18px] pb-[6px]">Starts at</p>
+                                <div class="flex items-center gap-[11px]">
+                                    <h2 class="text-[52px] leading-[54px] font-semibold plan-price">$4,100</h2>
+                                    <p class="text-[15px] leading-[22px] text-light-gray min-w-[86px]">/month <br />
+                                        billed yearly</p>
+                                </div>
+                                <p class="text-[15px] leading-[22px] pt-[23px] pb-[18px]">For retailers of all sizes.
+                                    Get started with
+                                    workflow automation and get
+                                    benefits from day one.</p>
+                                <button
+                                    class="px-[30px] py-[15px] font-semibold text-white rounded-2xl mb-[21px] bg-cf-blue transition-all hover:bg-cf-blue-hover">GET
+                                    A
+                                    QUOTE</button>
+                                <div class="flex flex-col">
+                                    <p class="text-[15px] font-bold">Everything in Stater +</p>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px] flex items-center gap-1">AI Automation <span
+                                                class="font-bold text-[9px] leading-[10px] text-cf-blue">NEW</span></p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">2FA & SSO</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Data Sources</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Workflow Logic & Alerts</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Styling & Outfitting</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Mobile Application</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Planning Calendar</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Capture One Integration </p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Adobe Photoshop Integration</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Custom Reporting</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">24/5 In-App Chat Support</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Collection Sharing </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col items-start px-[39px] py-[32px] bg-white rounded-2xl max-w-[340px] min-h-[672px]">
+                                <h2 class="text-[32px] font-semibold text-cf-blue">Enterprise</h2>
+                                <h2 class="text-[52px] mt-[46px] leading-[54px] font-semibold">Custom</h2>
+                                <p class="text-[15px] leading-[22px] pt-[23px] pb-[18px]">For retailers of all sizes.
+                                    Get started with
+                                    workflow automation and get
+                                    benefits from day one.</p>
+                                <button
+                                    class="px-[30px] py-[15px] font-semibold text-white rounded-2xl mb-[21px] bg-cf-blue transion-all hover:bg-cf-blue-hover">GET
+                                    A
+                                    QUOTE</button>
+                                <div class="flex flex-col">
+                                    <p class="text-[15px] font-bold">Everthing in Core +</p>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Unlimited Workspaces</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Talent Resourcing</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px] flex items-center gap-1">Call Sheets & Talent Booking
+                                            <span class="font-bold text-[9px] leading-[10px] text-cf-blue">NEW</span>
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Adobe Premiere Integration</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Data Analyst Access</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Dedicated Account Team</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Onsite Onboarding</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Editorial Projects</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Vendor Portal</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Integration Support</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">Product Hub</p>
+                                    </div>
+                                    <div class="flex items-center gap-[11px]">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="features" />
+                                        <p class="text-[15px]">3D Workflows</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 swiper media-swiper">
+                        <div class="swiper-wrapper lg:!hidden">
+                            <div class="swiper-slide rounded-2xl max-w-[340px]">
+                                <div
+                                    class="flex flex-col items-start px-[39px] py-[32px] bg-white rounded-2xl max-w-[340px] min-h-[672px]">
+                                    <h2 class="text-[32px] font-semibold text-cf-blue">Starter</h2>
+                                    <p class="text-[15px] leading-[22px] pt-[18px] pb-[6px]">Starts at</p>
+                                    <div class="flex items-center gap-[11px]">
+                                        <h2 class="text-[52px] leading-[54px] font-semibold plan-price">$2,400</h2>
+                                        <p class="text-[15px] leading-[22px] text-light-gray min-w-[86px] truncate">
+                                            /month <br /> billed
+                                            yearly</p>
+                                    </div>
+                                    <p class="text-[15px] leading-[22px] pt-[23px] pb-[18px]">For retailers of all
+                                        sizes. Get started with
+                                        workflow automation and get
+                                        benefits from day one.</p>
+                                    <button
+                                        class="px-[30px] py-[15px] font-semibold text-white rounded-2xl mb-[21px] bg-cf-blue">GET
+                                        A
+                                        QUOTE</button>
+                                    <div class="flex flex-col">
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px] font-bold">Unlimited Users</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Images, Video & Copy</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Digital Style Guides</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Workflow Automation</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Metadata Enrichment</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Sample Management</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">File Automation</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Asset Hub</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">API & Webhooks</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">All Connectors</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Standard Reporting</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Email Support</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Online Academy</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rounded-2xl max-w-[340px]">
+                                <div
+                                    class="flex flex-col items-start px-[39px] py-[32px] bg-white rounded-2xl max-w-[340px] min-h-[672px]">
+                                    <h2 class="text-[32px] font-semibold text-cf-blue">Core</h2>
+                                    <p class="text-[15px] leading-[22px] pt-[18px] pb-[6px]">Starts at</p>
+                                    <div class="flex items-center gap-[11px]">
+                                        <h2 class="text-[52px] leading-[54px] font-semibold plan-price">$4,100</h2>
+                                        <p class="text-[15px] leading-[22px] text-light-gray min-w-[86px]">/month <br />
+                                            billed yearly</p>
+                                    </div>
+                                    <p class="text-[15px] leading-[22px] pt-[23px] pb-[18px]">For retailers of all
+                                        sizes. Get started with
+                                        workflow automation and get
+                                        benefits from day one.</p>
+                                    <button
+                                        class="px-[30px] py-[15px] font-semibold text-white rounded-2xl mb-[21px] bg-cf-blue">GET
+                                        A
+                                        QUOTE</button>
+                                    <div class="flex flex-col">
+                                        <p class="text-[15px] font-bold">Everything in Stater +</p>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px] flex items-center gap-1">AI Automation <span
+                                                    class="font-bold text-[9px] leading-[10px] text-cf-blue">NEW</span>
+                                            </p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">2FA & SSO</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Data Sources</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Workflow Logic & Alerts</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Styling & Outfitting</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Mobile Application</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Planning Calendar</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Capture One Integration </p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Adobe Photoshop Integration</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Custom Reporting</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">24/5 In-App Chat Support</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Collection Sharing </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide rounded-2xl max-w-[340px]">
+                                <div
+                                    class="flex flex-col items-start px-[39px] py-[32px] bg-white rounded-2xl max-w-[340px] min-h-[672px]">
+                                    <h2 class="text-[32px] font-semibold text-cf-blue">Enterprise</h2>
+                                    <h2 class="text-[52px] mt-[46px] leading-[54px] font-semibold">Custom</h2>
+                                    <p class="text-[15px] leading-[22px] pt-[23px] pb-[18px]">For retailers of all
+                                        sizes. Get started with
+                                        workflow automation and get
+                                        benefits from day one.</p>
+                                    <button
+                                        class="px-[30px] py-[15px] font-semibold text-white rounded-2xl mb-[21px] bg-cf-blue">GET
+                                        A
+                                        QUOTE</button>
+                                    <div class="flex flex-col">
+                                        <p class="text-[15px] font-bold">Everthing in Core +</p>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Unlimited Workspaces</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Talent Resourcing</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px] flex items-center gap-1">Call Sheets & Talent Booking
+                                                <span
+                                                    class="font-bold text-[9px] leading-[10px] text-cf-blue">NEW</span>
+                                            </p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Adobe Premiere Integration</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Data Analyst Access</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Dedicated Account Team</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Onsite Onboarding</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Editorial Projects</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Vendor Portal</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Integration Support</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">Product Hub</p>
+                                        </div>
+                                        <div class="flex items-center gap-[11px]">
+                                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                                alt="features" />
+                                            <p class="text-[15px]">3D Workflows</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section class="container mx-auto">
+                <div class="max-w-[851px] mx-auto flex flex-col items-center justify-center gap-[22px]">
+                    <h2 class="flex items-center gap-2 text-xl font-semibold text-center text-white lg:text-3xl">Elevate
+                        your
+                        studio with <img class="hidden lg:block"
+                            src="{{ get_asset_url('/crf-test-2/assets/svgs/star.svg')}}"
+                            alt="start ai icon" />AI-powered
+                        innovations.</h2>
+                    <p class="lg:text-[19px] lg:leading-[29px] text-md text-white text-center mb-[32px] lg:mb-[53px]">At
+                        Creative
+                        Force, we
+                        research, test,
+                        and
+                        develop
+                        innovative AI-driven
+                        solutions that empower
+                        creative teams
+                        to transform their content production processes.</p>
+                </div>
+                <div class="grid grid-cols-12 gap-6 px-4">
+                    <div
+                        class="flex items-start lg:items-center col-span-12 lg:col-span-6 lg:row-start-1 bg-cf-light-blue rounded-2xl min-h-[250px] relative">
+                        <img src="{{ get_asset_url('/crf-test-2/assets/imgs/AI_Power2.png')}}" alt="Image 2"
+                            class="object-cover max-w-[150px] lg:max-w-[326px] h-full w-full">
+                        <div
+                            class="flex flex-col items-start gap-[11px] lg:pl-[36px] px-[12px] lg:pr-[33px] lg:pt-[75px] lg:pb-[45px] py-[10px]">
+                            <h3 class="text-[24px] leading-[28px] text-white font-semibold">E-Commerce Copywriting</h3>
+                            <p class="text-[15px] leading-[22px] text-white">Supercharge copy production with our
+                                multidimensional AI
+                                copywriter.
+                            </p>
+                        </div>
+                        <img src="{{ get_asset_url('/crf-test-2/assets/imgs/live_gradian.png')}}" alt="live gradian"
+                            class="absolute hidden lg:absolute lg:block transform -translate-x-1/2 top-10 lg:left-[calc(55%-10px)]" />
+                    </div>
+                    <div
+                        class="relative items-start flex lg:items-center col-span-12 lg:col-span-6 lg:row-start-1 bg-cf-light-blue rounded-2xl min-h-[250px]">
+                        <img src="{{ get_asset_url('/crf-test-2/assets/imgs/AI_Power2.png')}}" alt="Image 2"
+                            class="object-cover max-w-[150px] lg:max-w-[326px] h-full w-full">
+                        <div
+                            class="flex flex-col items-start gap-[11px] lg:pl-[36px] px-[12px] lg:pr-[33px] lg:pt-[75px] lg:pb-[45px] py-[10px]">
+                            <h3 class="text-[24px] leading-[28px] text-white font-semibold">Workflow</h3>
+                            <p class="text-[15px] leading-[22px] text-white">Build flexible, custom workflows that
+                                integrate with the
+                                most advancedAI services available.
+                            </p>
+                        </div>
+                        <img src="{{ get_asset_url('/crf-test-2/assets/imgs/live_gradian.png')}}" alt="live gradian"
+                            class="absolute hidden lg:absolute lg:block transform -translate-x-1/2 top-10 lg:left-[calc(55%-10px)] " />
+                    </div>
+
+                    <div
+                        class="flex items-start lg:items-center relative col-span-12 lg:col-span-4 lg:row-start-2 rounded-2xl bg-cf-light-blue max-h-[250px]">
+                        <img src="{{ get_asset_url('/crf-test-2/assets/imgs/AI_Power3.png')}}" alt="Image 3"
+                            class="object-cover max-w-[150px] lg:max-w-[160px] max-h-[250px]">
+                        <div
+                            class="flex flex-col items-start gap-[11px] lg:pl-[36px] px-[12px] lg:pr-[33px] lg:pt-[75px] lg:pb-[45px] py-[10px]">
+                            <h3 class="text-[24px] leading-[28px] text-white font-semibold">Garment Labels</h3>
+                            <p class="text-[15px] leading-[22px] text-white">Convert garment label information into
+                                digital data
+                                during sample check-in.
+                            </p>
+                        </div>
+                        <img src="{{ get_asset_url('/crf-test-2/assets/imgs/in_development.png')}}" alt="in development"
+                            class="lg:absolute lg:block hidden transform -translate-x-1/2 top-10 left-[200px] lg:left-[calc(50%-10px)]" />
+                    </div>
+                    <div
+                        class="flex items-start lg:items-center relative col-span-12 lg:col-span-4 lg:row-start-2 rounded-2xl bg-cf-light-blue max-h-[250px]">
+                        <img src="{{ get_asset_url('/crf-test-2/assets/imgs/AI_Power4.png')}}" alt="Image 4"
+                            class="object-cover max-w-[150px] lg:max-w-[160px] max-h-[250px] w-full h-full rounded-tl-2xl rounded-bl-2xl">
+                        <div
+                            class="flex flex-col items-start gap-[11px] lg:pl-[36px] px-[12px] lg:pr-[33px] lg:pt-[75px] lg:pb-[45px] py-[10px]">
+                            <h3 class="text-[24px] leading-[28px] text-white font-semibold">Digital Models</h3>
+                            <p class="text-[15px] leading-[22px] text-white">Increase image variety with advanced
+                                digital models.
+                            </p>
+                        </div>
+                        <img src="{{ get_asset_url('/crf-test-2/assets/imgs/in_development.png')}}" alt="in development"
+                            class="lg:absolute lg:block hidden transform -translate-x-1/2 top-10 left-[200px] lg:left-[calc(50%-10px)]" />
+                    </div>
+                    <div
+                        class="flex items-start lg:items-center relative col-span-12 lg:col-span-4 lg:row-start-2 rounded-2xl bg-cf-light-blue max-h-[250px]">
+                        <img src="{{ get_asset_url('/crf-test-2/assets/imgs/AI_Power5.png')}}" alt="Image 5"
+                            class="object-cover max-w-[150px] lg:max-w-[160px] max-h-[250px] w-full h-full">
+                        <div
+                            class="flex flex-col items-start gap-[11px] lg:pl-[36px] px-[12px] lg:pr-[33px] lg:pt-[75px] lg:pb-[45px] py-[10px]">
+                            <h3 class="text-[24px] leading-[28px] text-white font-semibold">Color Variations</h3>
+                            <p class="text-[15px] leading-[22px] text-white">Produce accurate and consistent color
+                                variations.
+                            </p>
+                        </div>
+                        <img src="{{ get_asset_url('/crf-test-2/assets/imgs/in_development.png')}}" alt="in development"
+                            class="lg:absolute lg:block hidden transform -translate-x-1/2 top-10 left-[200px] lg:left-[calc(50%-10px)]" />
+                    </div>
+                </div>
+
+            </section>
+        </section>
+        <section class="relative w-full mb-[10px] lg:mb-[135px] overflow-hidden px-4 overflow-x-hidden">
+            <div
+                class="absolute lg:block top-[-303px] right-[-128px] size-[714px] bg-custom-conic rounded-full blur-[200px] rotate-[77.56deg] z-0">
+            </div>
+            <section class="max-w-[1062px] mx-auto lg:mt-[112px] mt-[32px] relative z-10">
+                <h3 class="lg:text-[34px] text-2xl leading-6 text-center lg:leading-[42px] font-semibold">Unlock new
+                    possibilities
+                    with
+                    custom
+                    studio
+                    add-ons.</h3>
+                <p
+                    class="lg:text-[19px] text-md leading-6 lg:leading-[29px] text-center mt-[23px] lg:mb-[59px] mb-[24px]">
+                    Streamline
+                    workflows with powerful
+                    extensions tailored to
+                    enhance vendor
+                    collaboration and editorial
+                    projects,
+                    ensuring a seamless content production experience.</p>
+                <div class="flex flex-col gap-9">
+                    <div class="flex w-full h-full bg-center bg-cover rounded-2xl "
+                        style="background-image: url({{ get_asset_url('./assets/imgs/add-on1.png')}});">
+                        <div class="hidden lg:flex lg:flex-1"></div>
+                        <div class="bg-transparent flex-[2] pl-7 pt-[54px]">
+                            <h3 class="font-semibold text-[28px] leading-7 mb-4">Vendor-provided content extension</h3>
+                            <p class="text-[19px] leading-[29px] max-w-[568px] pr-4 lg:pr-0">Streamline your workflow by
+                                managing
+                                vendor-provided
+                                assets from initial request to final upload,
+                                ensuring consistency and efficiency at every step.</p>
+                            <div class="flex flex-col lg:items-center lg:flex-row">
+                                <div class="flex flex-col items-start gap-1 mt-8 lg:mt-0">
+                                    <p class="flex items-center gap-[11px] text-[15px] leading-5"><img
+                                            src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}" />Upload
+                                        directly in the
+                                        portal
+                                    </p>
+                                    <p class="flex items-center gap-[11px] text-[15px] leading-5"><img
+                                            src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}" />Track
+                                        unique image request
+                                        IDs
+                                    </p>
+                                    <p class="flex items-center gap-[11px] text-[15px] leading-5"><img
+                                            src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}" />Visual
+                                        style guides and
+                                        standards
+                                    </p>
+                                    <p class="flex items-center gap-[11px] text-[15px] leading-5"><img
+                                            src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}" />Approvals for
+                                        faster
+                                        turnaround
+                                    </p>
+                                    <button
+                                        class="mt-4 lg:mt-[32px] text-[15px] rounded-lg leading-[18px] py-[15px] px-[30px] bg-cf-blue text-white">READ
+                                        MORE</button>
+                                </div>
+                                <img src="{{ get_asset_url('/crf-test-2/assets/imgs/sub-add-on1.png')}}"
+                                    alt="sub add on 1" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex w-full h-full bg-center bg-cover rounded-2xl"
+                        style="background-image: url({{ get_asset_url('./assets/imgs/add-on2.png')}});">
+                        <div class="hidden lg:flex lg:flex-1"></div>
+                        <div class="bg-transparent flex-[2] pl-7 pt-[54px]">
+                            <h3 class="font-semibold text-[28px] leading-7 mb-4">Vendor-provided content extension</h3>
+                            <p class="text-[19px] leading-[29px] max-w-[568px] pr-4 lg:pr-0">Streamline your workflow by
+                                managing
+                                vendor-provided
+                                assets from initial request to final upload,
+                                ensuring consistency and efficiency at every step.</p>
+                            <div class="flex flex-col lg:items-center lg:flex-row">
+                                <div class="flex flex-col items-start gap-1 mt-8 lg:mt-0">
+                                    <p class="flex items-center gap-[11px] text-[15px] leading-5"><img
+                                            src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}" />Upload
+                                        directly in the
+                                        portal
+                                    </p>
+                                    <p class="flex items-center gap-[11px] text-[15px] leading-5"><img
+                                            src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}" />Track
+                                        unique image request
+                                        IDs
+                                    </p>
+                                    <p class="flex items-center gap-[11px] text-[15px] leading-5"><img
+                                            src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}" />Visual
+                                        style guides and
+                                        standards
+                                    </p>
+                                    <p class="flex items-center gap-[11px] text-[15px] leading-5"><img
+                                            src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}" />Approvals for
+                                        faster
+                                        turnaround
+                                    </p>
+                                    <button
+                                        class="mt-4 lg:mt-[32px] text-[15px] rounded-lg leading-[18px] py-[15px] px-[30px] bg-cf-blue text-white">READ
+                                        MORE</button>
+                                </div>
+                                <img src="{{ get_asset_url('/crf-test-2/assets/imgs/sub-add-on2.png')}}"
+                                    alt="sub add on 2" class="rounded-2xl" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <div class="relative">
+            <section class="sticky w-full top-[100px] bg-cf-blue hidden lg:block" style="z-index: 999">
+                <div class="flex items-center justify-start pt-[33px] pb-[38px] max-w-[1440px] mx-auto">
+                    <div class="pl-[80px] pr-[256px]">
+                        <h2 class="text-white mb-[21px] text-[35px] leading-[42px] font-semibold">Compare plans</h2>
+                        <div class="flex items-center gap-[23px]">
+                            <p class="cursor-pointer text-cf-med-white">KEY FEATURES</p>
+                            <p class="text-white underline cursor-pointer">ALL FEATURES</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between gap-[124px] pr-[193px]">
+                        <div class="flex flex-col items-start">
+                            <h3 class="text-white text-[15px] leading-[22px]">Starter</h3>
+                            <div class="flex items-center gap-2">
+                                <p class="text-white pt-[1px] font-semibold pb-[9px] text-[28px] leading-[32px]">$2,400
+                                </p>
+                                <span class="text-white">/mo</span>
+                            </div>
+                            <button
+                                class="text-black bg-white px-[20px] py-[10px] text-[13px] leading-4 rounded-md font-semibold hover:bg-">GET
+                                A
+                                QUOTE</button>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <h3 class="text-white text-[15px] leading-[22px]">Core</h3>
+                            <div class="flex items-center gap-2">
+                                <p class="text-white pt-[1px] font-semibold pb-[9px] text-[28px] leading-[32px]">$4,100
+                                </p>
+                                <span class="text-white">/mo</span>
+                            </div>
+                            <button
+                                class="text-black bg-white px-[20px] py-[10px] text-[13px] leading-4 rounded-md font-semibold hover:bg-">GET
+                                A
+                                QUOTE</button>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <h3 class="text-white text-[15px] leading-[22px]">Enterprise</h3>
+                            <p class="leading-[32px] text-white pt-[1px] font-semibold pb-[9px] text-[28px] ">Custom</p>
+                            <button
+                                class="text-black bg-white px-[20px] py-[10px] text-[13px] leading-4 rounded-md font-semibold hover:bg-">GET
+                                A
+                                QUOTE</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pt-[57px] relative bg-cf-plan-grey">
+                <div class="cloud-text absolute bg-cf-blur-white z-20 bottom-20 w-full lg:h-[268px] h-[135px] "></div>
+                <div class="container pb-8 mx-auto">
+                    <div class="mb-6 ">
+                        <h1 class="text-4xl leading-[42px] font-bold mb-2 lg:mx-0 mx-4">Creative Force Cloud.</h1>
+                        <p class="text-[15px] mx-4 lg:mx-0">Scalable, secure, and built for seamless collaboration
+                            <br /> across
+                            unlimited
+                            users
+                            and clients.</p>
+                    </div>
+
+                    <div class="overflow-x-auto custom-scroll">
+                        <table class="min-w-full bg-white border-t border-b table-fixed border-cf-plans-border">
+                            <thead class="lg:hidden">
+                                <tr class="text-white bg-cf-blue">
+                                    <th class="py-3 text-sm text-left min-w-[270px]">
+                                        <div class="pl-2">
+                                            <h2 class="text-white mb-[21px] text-[24px] leading-[22px] font-semibold">
+                                                Compare plans</h2>
+                                            <div class="flex items-center gap-[12px]">
+                                                <p class="text-cf-med-white text-[12px] cursor-pointer">KEY FEATURES</p>
+                                                <p class="text-white underline text-[12px] cursor-pointer">ALL FEATURES
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th class="py-3 text-sm text-center">
+                                        <div class="flex flex-col items-start">
+                                            <h3 class="text-[14px] leading-[22px]">Starter</h3>
+                                            <div class="flex items-center my-1">
+                                                <p class="text-[20px] leading-[24px]">$2,400</p>
+                                                <span>/mo</span>
+                                            </div>
+                                            <a href="#" class="cursor-pointer text-[12px] underline">GET A QUOTE</a>
+                                        </div>
+                                    </th>
+                                    <th class="py-3 text-sm text-center">
+                                        <div class="flex flex-col items-start">
+                                            <h3 class="text-[14px] leading-[22px]">Core</h3>
+                                            <div class="flex items-center my-1">
+                                                <p class="text-[20px] leading-[24px]">$4,100</p>
+                                                <span>/mo</span>
+                                            </div>
+                                            <a href="#" class="cursor-pointer text-[12px] underline">GET A QUOTE</a>
+                                        </div>
+                                    </th>
+                                    <th class="py-3 text-sm text-center">
+                                        <div class="flex flex-col items-start">
+                                            <h3 class="text-[14px] leading-[22px]">Enterprise</h3>
+                                            <p class="text-[20px] leading-[24px] my-1">Custom</p>
+                                            <a href="#" class="cursor-pointer text-[12px] underline">GET A QUOTE</a>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-cf-plan-grey">
+                                <tr class="border-t border-cf-plans-border">
+                                    <td class="flex items-center py-3 text-sm text-gray-700 gap-[10px] ml-3 lg:ml-0">
+                                        Users<img src="{{ get_asset_url('/crf-test-2/assets/svgs/plans-info.svg')}}"
+                                            alt="plan info" /></td>
+                                    <td class="py-3 min-w-[125px]">Unlimited</td>
+                                    <td class="py-3 min-w-[125px]">Unlimited</td>
+                                    <td class="py-3 min-w-[125px]">Unlimited</td>
+                                </tr>
+                                <tr class="border-t border-cf-plans-border">
+                                    <td class="flex items-center py-3 text-sm text-gray-700 gap-[10px] ml-3 lg:ml-0">
+                                        Workspaces
+                                        (Clients)<img src="{{ get_asset_url('/crf-test-2/assets/svgs/plans-info.svg')}}"
+                                            alt="plan info" /></td>
+                                    <td class="py-3">1</td>
+                                    <td class="py-3">3</td>
+                                    <td class="py-3">Unlimited</td>
+                                </tr>
+                                <tr class="border-t border-cf-plans-border">
+                                    <td class="flex items-center py-3 text-sm text-gray-700 gap-[10px] ml-3 lg:ml-0">
+                                        Additional
+                                        Workspaces<img
+                                            src="{{ get_asset_url('/crf-test-2/assets/svgs/plans-info.svg')}}"
+                                            alt="plan info" /></td>
+                                    <td colspan="2"></td>
+                                    <td class="py-3">$</td>
+                                </tr>
+                                <tr class="border-t border-cf-plans-border">
+                                    <td class="flex py-3 ml-3 text-sm text-gray-700 lg:ml-0">Cloud Based</td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                </tr>
+                                <tr class="border-t border-cf-plans-border">
+                                    <td class="flex py-3 ml-3 text-sm text-gray-700 lg:ml-0">Multi-Tenant Database</td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                </tr>
+                                <tr class="border-t border-cf-plans-border">
+                                    <td class="flex py-3 ml-3 text-sm text-gray-700 lg:ml-0">Regional Multi-Tenant
+                                        Binary Storage</td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                </tr>
+                                <tr class="border-t border-cf-plans-border">
+                                    <td class="flex py-3 ml-3 text-sm text-gray-700 lg:ml-0">Full Redundant Backup</td>
+                                    <td class="py-3"></td>
+                                    <td class="py-3">$</td>
+                                    <td class="py-3">$</td>
+                                </tr>
+                                <tr class="border-t border-cf-plans-border">
+                                    <td class="flex items-center py-3 text-sm text-gray-700 lg:ml-0 ml-3 gap-[10px]">
+                                        Dedicated Database
+                                    </td>
+                                    <td colspan="2"></td>
+                                    <td class="py-3">$</td>
+                                </tr>
+                                <tr class="border-t border-cf-plans-border">
+                                    <td class="flex py-3 ml-3 text-sm text-gray-700 lg:ml-0">API</td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                </tr>
+                                <tr class="border-t border-cf-plans-border">
+                                    <td class="flex py-3 ml-3 text-sm text-gray-700 lg:ml-0">Webhooks</td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                </tr>
+                                <tr class="border-t border-cf-plans-border">
+                                    <td class="flex py-3 ml-3 text-sm text-gray-700 lg:ml-0">File Automation</td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                </tr>
+                                <tr class="border-t border-cf-plans-border">
+                                    <td class="flex py-3 ml-3 text-sm text-gray-700 lg:ml-0">FTP Server (10GB)</td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                </tr>
+                                <tr class="border-t border-cf-plans-border">
+                                    <td class="flex py-3 ml-3 text-sm text-gray-700 lg:ml-0">File Types Essentials</td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                    <td class="py-3">
+                                        <img src="{{ get_asset_url('/crf-test-2/assets/svgs/tick.svg')}}"
+                                            alt="tick icon" />
+                                    </td>
+                                </tr>
+                                <tr class="border-t border-cf-plans-border">
+                                    <td class="flex py-3 ml-3 text-sm text-gray-700 lg:ml-0">File Type Advanced</td>
+                                    <td></td>
+                                    <td class="py-3">$</td>
+                                    <td class="py-3">$</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-6 text-center">
+                            <button class="text-sm font-semibold text-black underline btnShowPlan"
+                                onclick="btnShowPlan()">
+                                Show all
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="w-full relative pt-[122px] pb-[94px] bg-cf-light-grey px-5 lg:px-[60px]">
+            <div class="container mx-auto">
+                <img src="{{ get_asset_url('/crf-test-2/assets/imgs/ellipse-gradian.png')}}" alt="Brand Image"
+                    class="absolute top-0 left-0 z-0">
+                <div class="relative z-[1]">
+                    <div class="flex flex-col items-center w-full">
+                        <p class="font-semibold text-5xl mb-5 -tracking-[0.04em]">Trusted by industry leaders.</p>
+                        <p class="max-w-[846px] text-center leading-5 text-[19px] font-[450px]">See how creative force
+                            empowers
+                            brands
+                            to achieve faster results, increase
+                            productivity, and streamline their creative processes.</p>
+                    </div>
+                    <div class="grid w-full grid-cols-12 gap-6 mt-14">
+                        <div class="grid grid-cols-8 col-span-12 gap-6 lg:col-span-8">
+                            <div
+                                class="col-span-8 md:col-span-5 gradient-card flex flex-col items-center justify-start pt-12 pb-[43px] px-[50px] z-10 text-center">
+                                <p class="text-xl font-[450px] mb-3.5">Decreased photographer onboarding time from 1 day
+                                    to
+                                    20 minutes</p>
+                                <p class="text-xs font-semibold underline tracking-[0.05em]">BOOHOO CASE STUDY</p>
+                            </div>
+                            <div
+                                class="col-span-8 md:col-span-3 gradient-card flex flex-col items-center justify-start pt-[27px] pl-[75px] pr-[76px] pb-[31px]  text-center">
+                                <p class="text-xl font-[450px] mb-[10px]">MACH Certified</p>
+                                <img src="{{ get_asset_url('/crf-test-2/assets/imgs/mach-logo.png')}}" alt="logo"
+                                    width="151px" />
+                            </div>
+                            <div class="grid grid-cols-1 col-span-8 gap-6 md:col-span-4">
+                                <div
+                                    class="gradient-card flex flex-col items-center justify-start pt-[35px] px-[89px] pr-[90px] pb-[45px] z-10 text-center">
+                                    <div class="w-full flex justify-center gradient-content-reverse mb-[2px]">
+                                        <p class="text-[110px] font-bold -tracking-[0.03em] leading-[110px]">3x</p>
+                                    </div>
+                                    <p class="text-xl font-[450px] mb-3.5">More marketing projects completed per year
+                                    </p>
+                                    <p class="text-xs font-semibold underline tracking-[0.05em]">SANMAR CASE STUDY</p>
+                                </div>
+                                <div
+                                    class="gradient-card flex flex-col items-center justify-start pt-[38px] px-11 pb-[39px] text-center z-10">
+                                    <img src="{{ get_asset_url('/crf-test-2/assets/imgs/G2.png')}}" alt="logo"
+                                        width="20px" class="mx-auto mb-[17.41px]" />
+                                    <p class="text-base font-[450px] leading-[22px] mb-[35px]">“Creative Force isn't
+                                        just software; it's a
+                                        partnership with a shared
+                                        goal of creating efficiencies within workflows.”</p>
+                                    <p class="text-xs font-semibold">MICHELL M.</p>
+                                    <p class="text-xs font-normal">Director, Creative & Photo Studio Operations</p>
+                                    <img src="{{ get_asset_url('/crf-test-2/assets/imgs/full-rating-star.png')}}"
+                                        alt="logo" class="mx-auto mt-[9px]" />
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 col-span-8 gap-6 md:col-span-4">
+                                <div
+                                    class="gradient-card flex flex-col items-center justify-start pt-[60px] px-11 pb-[49px] text-center">
+                                    <p class="text-xl font-[450px] mb-[33px] -tracking-[0.01em]">“Implementing Creative
+                                        Force reduced a
+                                        large amount of unnecessary admin work which has improved efficiency and lowered
+                                        potential reshoots,
+                                        which is a large cost- and time-saver.”</p>
+                                    <div class="flex justify-center items-center gap-1 mb-[1px]">
+                                        <p class="text-xs font-semibold">JOEL PAMMENTER</p>
+                                        <div class="border-t-[0.1rem] border-solid w-2"></div>
+                                        <p class="text-xs font-normal">Senior Photographer</p>
+                                    </div>
+                                    <img src="{{ get_asset_url('/crf-test-2/assets/imgs/boohoo-logo.png')}}" alt="logo"
+                                        class="mx-auto" />
+                                </div>
+                                <div
+                                    class="gradient-card pl-11 pr-[43px] pt-[19px] pb-[16px] flex justify-between items-center">
+                                    <img src="{{ get_asset_url('/crf-test-2/assets/imgs/achievement-1.png')}}"
+                                        alt="logo" />
+                                    <img src="{{ get_asset_url('/crf-test-2/assets/imgs/achievement-2.png')}}"
+                                        alt="logo" />
+                                    <img src="{{ get_asset_url('/crf-test-2/assets/imgs/achievement-3.png')}}"
+                                        alt="logo" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 col-span-12 gap-6 md:grid-cols-2 lg:grid-cols-1 lg:col-span-4">
+                            <div
+                                class="gradient-card flex flex-col items-center justify-start pt-[61px] px-11 pb-[49px] text-center">
+                                <p class="text-xl font-[450px] mb-[33px] -tracking-[0.01em]">“We can just come in, get
+                                    into the flow,
+                                    get
+                                    into the groove. We pass our files off just like everyone else does. But all that
+                                    little painstaking,
+                                    not fun stuff, is handled by the program.”</p>
+                                <div class="flex justify-center items-center gap-1 mb-[11px]">
+                                    <p class="text-xs font-semibold">ANTHONY NOCELLA</p>
+                                    <div class="border-t-[0.1rem] border-solid w-2"></div>
+                                    <p class="text-xs font-normal">Lead Photographer</p>
+                                </div>
+                                <img src="{{ get_asset_url('/crf-test-2/assets/imgs/nuuly-logo.png')}}" alt="logo"
+                                    class="mx-auto" />
+                            </div>
+                            <div class="grid grid-cols-1 gap-6">
+                                <div class="gradient-card py-[42px] pl-10 pr-11 flex justify-between items-center">
+                                    <img src="{{ get_asset_url('/crf-test-2/assets/imgs/G2.png')}}" alt="logo" />
+                                    <img src="{{ get_asset_url('/crf-test-2/assets/imgs/rating-star.png')}}"
+                                        alt="logo" />
+                                    <div class="text-lg leading-[22px] font-bold">4.7 <span class="font-normal">out
+                                            of</span> 5</div>
+                                </div>
+                                <div
+                                    class="gradient-card flex flex-col items-center justify-start pt-[35px] px-[96px] pb-[51px]">
+                                    <div class="flex items-end mb-[2px] gradient-content">
+                                        <p class="text-[110px] font-bold -tracking-[0.06em] leading-[110px]">8</p>
+                                        <span class="text-[110px] font-bold -tracking-[0.03em] leading-[110px]">2</span>
+                                        <p class="text-[52px] font-semibold -tracking-[0.04em] leading-[65px]">%</p>
+                                    </div>
+                                    <p class="text-xl font-[450px] mb-3">Faster turnaround time</p>
+                                    <p class="text-xs font-semibold underline tracking-[0.05em]">ORENDT STUDIOS CASE
+                                        STUDY</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="px-10 mx-auto flex flex-col md:flex-row md:flex-wrap lg:gap-0 md:gap-10 justify-center lg:justify-between items-center mt-[55.56px]">
+                        <div class="min-h-[58px] flex items-center"><img
+                                src="{{ get_asset_url('/crf-test-2/assets/imgs/columbia-logo.png')}}" alt="logo" />
+                        </div>
+                        <div class="min-h-[58px] flex items-center"><img
+                                src="{{ get_asset_url('/crf-test-2/assets/imgs/henry-shein-logo.png')}}" alt="logo" />
+                        </div>
+                        <div class="min-h-[58px] flex items-center"><img
+                                src="{{ get_asset_url('/crf-test-2/assets/imgs/bestseller-logo.png')}}" alt="logo" />
+                        </div>
+                        <div class="min-h-[58px] flex items-center"><img
+                                src="{{ get_asset_url('/crf-test-2/assets/imgs/aldo-logo.png')}}" alt="logo" /></div>
+                        <div class="min-h-[58px] flex items-center"><img
+                                src="{{ get_asset_url('/crf-test-2/assets/imgs/david-yurman-logo.png')}}" alt="logo" />
+                        </div>
+                        <div class="min-h-[58px] flex items-center"><img
+                                src="{{ get_asset_url('/crf-test-2/assets/imgs/calvin-klein-logo.png')}}" alt="logo" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-purple px-5 lg:px-[60px]">
+            <div class="m-auto container py-12 lg:pt-[113px] lg:pb-[101px] grid grid-cols-12 lg:gap-6">
+                <div class="col-span-12 xl:col-span-5 lg:col-start-2">
+                    <h2
+                        class="text-4xl text-center text-cf-dark-purple font-semibold mb-7 tracking-[-0.04em] lg:mb-[39px] lg:text-48-58 xl:text-left">
+                        Security & Compliance.
+                    </h2>
+                    <p class="text-cf-dark-purple text-center mb-8 lg:text-19-29 lg:mb-[34px] xl:text-left">Built to
+                        meet the
+                        highest standards of data protection and regulatory compliance. Our robust infrastructure
+                        includes advanced
+                        encryption protocols, ensuring your data remains secure and fully compliant at all times.</p>
+                </div>
+                <div class="col-span-12 flex flex-col items-center xl:items-start gap-6 xl:col-span-5 lg:ml-[16px]">
+                    <div class="flex flex-col items-center sm:flex-row md:items-start gap-[23px]">
+                        <div
+                            class="flex items-center w-60 py-[14px] px-[25px] bg-[#F1F2FF] rounded-[40px] gap-[17px] min-h-20">
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/soc-2-type-2.svg')}}"
+                                alt="SOC 2 Type II" loading="lazy">
+                            <p
+                                class="text-[19px] leading-[26px] text-cf-dark-purple tracking-[-0.02em] font-medium lg:font-semibold">
+                                SOC 2 Type II
+                            </p>
+                        </div>
+                        <div
+                            class="flex items-center w-60 py-[14px] px-[25px] bg-[#F1F2FF] rounded-[40px] gap-5 min-h-20">
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/encryption.svg')}}" alt="256-bit
+              Encryption" loading="lazy">
+                            <p
+                                class="text-[19px] leading-[26px] text-cf-dark-purple tracking-[-0.02em] font-medium lg:font-semibold">
+                                256-bit
+                                Encryption</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center sm:flex-row md:items-start gap-[23px]">
+                        <div
+                            class="flex items-center w-60 py-[14px] px-[25px] bg-[#F1F2FF] rounded-[40px] gap-[15px] min-h-20">
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/data-privacy.svg')}}"
+                                alt="Data Privacy & GDPR" loading="lazy">
+                            <p
+                                class="text-[19px] leading-[26px] text-cf-dark-purple tracking-[-0.02em] font-medium lg:font-semibold">
+                                Data Privacy &
+                                GDPR
+                            </p>
+                        </div>
+                        <div
+                            class="flex items-center w-60 py-[14px] px-[25px] bg-[#F1F2FF] rounded-[40px] gap-5 min-h-20">
+                            <img src="{{ get_asset_url('/crf-test-2/assets/svgs/third-party-management.svg')}}" alt="256-bit
+              Encryption" loading="lazy">
+                            <p
+                                class="text-[19px] leading-[26px] text-cf-dark-purple tracking-[-0.02em] font-medium lg:font-semibold">
+                                Third-Party
+                                Management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="relative flex justify-center bg-cf-light-grey px-5 lg:px-[60px] overflow-hidden">
+            <div class="m-auto container py-12 lg:pt-[117px] lg:pb-[132px]">
+                <h2
+                    class="text-center text-4xl text-cf-dark-purple font-semibold tracking-[-0.04em] mb-7 lg:text-48-58 lg:mb-[18px]">
+                    Frequently asked questions.
+                </h2>
+                <p
+                    class="text-center text-cf-dark-purple font-[450] mx-auto max-w-[846px] mb-5 lg:text-19-29 lg:mb-[39px]">
+                    Looking
+                    for more information?
+                    Check
+                    out these
+                    frequently asked
+                    questions
+                    about our pricing.</p>
+
+                <div class="relative w-full max-w-[846px] mx-auto z-[1]">
+                    <div
+                        class="border-b-[1.5px] border-cf-plans-border py-3 lg:pt-[23px] lg:pb-[27px] first:border-t-[1.5px]">
+                        <button
+                            class="flex items-center justify-between w-full gap-4 font-medium text-left text-gray-800 focus:outline-none open-content"
+                            onclick="toggleCollapse(this)">
+                            <span class="flex-1 text-lg font-semibold lg:font-bold lg:text-22-30">How do monthly and
+                                annual pricing
+                                differ?</span>
+                            <div class="icon-container">
+                                <img src="{{ get_asset_url('/crf-test-2/assets/svgs/minus-circle.svg')}}"
+                                    class="size-4 lg:size-6">
+                            </div>
+                        </button>
+                        <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+                            <p class="mt-[10px]">
+                                Tempor velit a nibh dui facilisis congue etiam amet. Efficitur ullamcorper egestas
+                                maecenas
+                                ullamcorper
+                                ad interdum ridiculus enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi ut aliquip
+                                ex
+                                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu
+                                fugiat nulla pariatur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="border-b-[1.5px] border-cf-plans-border py-3 lg:pt-[23px] lg:pb-[27px] first:border-t-[1.5px]">
+                        <button
+                            class="flex items-center justify-between w-full gap-4 font-medium text-left text-gray-800 focus:outline-none"
+                            onclick="toggleCollapse(this)">
+                            <span class="flex-1 text-lg font-semibold lg:font-bold lg:text-22-30">How do monthly and
+                                annual pricing
+                                differ?</span>
+                            <div class="icon-container">
+                                <img src="{{ get_asset_url('/crf-test-2/assets/svgs/minus-circle.svg')}}"
+                                    class="size-4 lg:size-6">
+                            </div>
+                        </button>
+                        <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+                            <p class="mt-[10px]">
+                                Tempor velit a nibh dui facilisis congue etiam amet. Efficitur ullamcorper egestas
+                                maecenas
+                                ullamcorper
+                                ad interdum ridiculus enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi ut aliquip
+                                ex
+                                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu
+                                fugiat nulla pariatur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="border-b-[1.5px] border-cf-plans-border py-3 lg:pt-[23px] lg:pb-[27px] first:border-t-[1.5px]">
+                        <button
+                            class="flex items-center justify-between w-full gap-4 font-medium text-left text-gray-800 focus:outline-none"
+                            onclick="toggleCollapse(this)">
+                            <span class="flex-1 text-lg font-semibold lg:font-bold lg:text-22-30">How many users are
+                                included in
+                                Starter
+                                and Core
+                                plans?</span>
+                            <div class="icon-container">
+                                <img src="{{ get_asset_url('/crf-test-2/assets/svgs/minus-circle.svg')}}"
+                                    class="size-4 lg:size-6">
+                            </div>
+                        </button>
+                        <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+                            <p class="mt-[10px]">
+                                Tempor velit a nibh dui facilisis congue etiam amet. Efficitur ullamcorper egestas
+                                maecenas
+                                ullamcorper
+                                ad interdum ridiculus enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi ut aliquip
+                                ex
+                                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu
+                                fugiat nulla pariatur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="border-b-[1.5px] border-cf-plans-border py-3 lg:pt-[23px] lg:pb-[27px] first:border-t-[1.5px]">
+                        <button
+                            class="flex items-center justify-between w-full gap-4 font-medium text-left text-gray-800 focus:outline-none"
+                            onclick="toggleCollapse(this)">
+                            <span class="flex-1 text-lg font-semibold lg:font-bold lg:text-22-30">Is there a minimum
+                                contract
+                                length?</span>
+                            <div class="icon-container">
+                                <img src="{{ get_asset_url('/crf-test-2/assets/svgs/minus-circle.svg')}}"
+                                    class="size-4 lg:size-6">
+                            </div>
+                        </button>
+                        <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+                            <p class="mt-[10px]">
+                                Tempor velit a nibh dui facilisis congue etiam amet. Efficitur ullamcorper egestas
+                                maecenas
+                                ullamcorper
+                                ad interdum ridiculus enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi ut aliquip
+                                ex
+                                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu
+                                fugiat nulla pariatur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="border-b-[1.5px] border-cf-plans-border py-3 lg:pt-[23px] lg:pb-[27px] first:border-t-[1.5px]">
+                        <button
+                            class="flex items-center justify-between w-full gap-4 font-medium text-left text-gray-800 focus:outline-none"
+                            onclick="toggleCollapse(this)">
+                            <span class="flex-1 text-lg font-semibold lg:font-bold lg:text-22-30">Will I be charged
+                                sales
+                                tax?</span>
+                            <div class="icon-container">
+                                <img src="{{ get_asset_url('/crf-test-2/assets/svgs/minus-circle.svg')}}"
+                                    class="size-4 lg:size-6">
+                            </div>
+                        </button>
+                        <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+                            <p class="mt-[10px]">
+                                Tempor velit a nibh dui facilisis congue etiam amet. Efficitur ullamcorper egestas
+                                maecenas
+                                ullamcorper
+                                ad interdum ridiculus enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi ut aliquip
+                                ex
+                                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu
+                                fugiat nulla pariatur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="border-b-[1.5px] border-cf-plans-border py-3 lg:pt-[23px] lg:pb-[27px] first:border-t-[1.5px]">
+                        <button
+                            class="flex items-center justify-between w-full gap-4 font-medium text-left text-gray-800 focus:outline-none"
+                            onclick="toggleCollapse(this)">
+                            <span class="flex-1 text-lg font-semibold lg:font-bold lg:text-22-30">Who on my account can
+                                add
+                                users?</span>
+                            <div class="icon-container">
+                                <img src="{{ get_asset_url('/crf-test-2/assets/svgs/minus-circle.svg')}}"
+                                    class="size-4 lg:size-6">
+                            </div>
+                        </button>
+                        <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+                            <p class="mt-[10px]">
+                                Tempor velit a nibh dui facilisis congue etiam amet. Efficitur ullamcorper egestas
+                                maecenas
+                                ullamcorper
+                                ad interdum ridiculus enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi ut aliquip
+                                ex
+                                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu
+                                fugiat nulla pariatur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="border-b-[1.5px] border-cf-plans-border py-3 lg:pt-[23px] lg:pb-[27px] first:border-t-[1.5px]">
+                        <button
+                            class="flex items-center justify-between w-full gap-4 font-medium text-left text-gray-800 focus:outline-none"
+                            onclick="toggleCollapse(this)">
+                            <span class="flex-1 text-lg font-semibold lg:font-bold lg:text-22-30">What happens if I
+                                exceed my
+                                current
+                                plan
+                                limits?</span>
+                            <div class="icon-container">
+                                <img src="{{ get_asset_url('/crf-test-2/assets/svgs/minus-circle.svg')}}"
+                                    class="size-4 lg:size-6">
+                            </div>
+                        </button>
+                        <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+                            <p class="mt-[10px]">
+                                Tempor velit a nibh dui facilisis congue etiam amet. Efficitur ullamcorper egestas
+                                maecenas
+                                ullamcorper
+                                ad interdum ridiculus enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi ut aliquip
+                                ex
+                                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu
+                                fugiat nulla pariatur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="border-b-[1.5px] border-cf-plans-border py-3 lg:pt-[23px] lg:pb-[27px] first:border-t-[1.5px]">
+                        <button
+                            class="flex items-center justify-between w-full gap-4 font-medium text-left text-gray-800 focus:outline-none"
+                            onclick="toggleCollapse(this)">
+                            <span class="flex-1 text-lg font-semibold lg:font-bold lg:text-22-30">Do my external clients
+                                need to
+                                have
+                                an
+                                account?</span>
+                            <div class="icon-container">
+                                <img src="{{ get_asset_url('/crf-test-2/assets/svgs/minus-circle.svg')}}"
+                                    class="size-4 lg:size-6">
+                            </div>
+                        </button>
+                        <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+                            <p class="mt-[10px]">
+                                Tempor velit a nibh dui facilisis congue etiam amet. Efficitur ullamcorper egestas
+                                maecenas
+                                ullamcorper
+                                ad interdum ridiculus enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi ut aliquip
+                                ex
+                                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu
+                                fugiat nulla pariatur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="border-b-[1.5px] border-cf-plans-border py-3 lg:pt-[23px] lg:pb-[27px] first:border-t-[1.5px]">
+                        <button
+                            class="flex items-center justify-between w-full gap-4 font-medium text-left text-gray-800 focus:outline-none"
+                            onclick="toggleCollapse(this)">
+                            <span class="flex-1 text-lg font-semibold lg:font-bold lg:text-22-30">Can I upgrade my plan
+                                mid-cycle?</span>
+                            <div class="icon-container">
+                                <img src="{{ get_asset_url('/crf-test-2/assets/svgs/minus-circle.svg')}}"
+                                    class="size-4 lg:size-6">
+                            </div>
+                        </button>
+                        <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+                            <p class="mt-[10px]">
+                                Tempor velit a nibh dui facilisis congue etiam amet. Efficitur ullamcorper egestas
+                                maecenas
+                                ullamcorper
+                                ad interdum ridiculus enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi ut aliquip
+                                ex
+                                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu
+                                fugiat nulla pariatur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="absolute bottom-[-243px] right-[-128px] size-[714px] bg-custom-conic rounded-full blur-[200px] rotate-[-43.89deg] z-0">
+                </div>
+        </section>
+
+        <section class="relative bg-purple px-5 lg:px-[60px] z-[1]">
+            <div class="m-auto container py-12 lg:pt-[115px] lg:pb-[134px] grid grid-cols-12 lg:gap-3">
+                <div class="col-span-12 lg:col-span-5">
+                    <h2
+                        class="text-4xl text-center text-cf-dark-purple font-semibold mb-7 lg:mb-[39px] lg:text-48-58 lg:text-left">
+                        Explore the <span
+                            class="font-petrona font-light italic gradient-text tracking-[-0.04em] pr-[2px]">AI-driven</span>
+                        <br class="block lg:hidden">
+                        future of
+                        content
+                        production.
+                    </h2>
+                    <p class="text-cf-dark-purple text-center mb-5 lg:text-19-29 lg:mb-[34px] lg:text-left">Transform
+                        your studio
+                        operations with innovative,
+                        AI-powered
+                        solutions tailored
+                        for the future of content
+                        creation. Learn how we can elevate your workflow today.
+                    </p>
+                    <div class="flex justify-center lg:justify-start">
+                        <button
+                            class="text-2sm px-[30px] py-[15px] mb-6 text-white rounded-lg bg-cf-blue uppercase font-semibold lg:mb-[50px]">
+                            talk with us
+                        </button>
+                    </div>
+                    <ul class="flex justify-center mb-8 lg:justify-start lg:mb-0">
+                        <li class="z-[4] aspect-square size-20 lg:size-[119px]">
+                            <img src="{{ get_asset_url('/crf-test-2/assets/imgs/Julie-King.png')}}" alt="Julie King"
+                                loading="lazy" class="object-contain rounded-full">
+                        </li>
+                        <li class="ml-[-6px] z-[3] aspect-square size-20 lg:ml-[-21px] lg:size-[119px]">
+                            <img src="{{ get_asset_url('/crf-test-2/assets/imgs/Alex-Chin.png')}}" alt="Alex Chin"
+                                loading="lazy" class="object-contain rounded-full">
+                        </li>
+                        <li class="ml-[-6px] z-[2] aspect-square size-20 lg:ml-[-21px] lg:size-[119px]">
+                            <img src="{{ get_asset_url('/crf-test-2/assets/imgs/Timothy-Callanan.png')}}"
+                                alt="Timothy Callanan" loading="lazy" class="object-contain rounded-full">
+                        </li>
+                        <li class="ml-[-6px] z-[1] aspect-square size-20 lg:ml-[-21px] lg:size-[119px]">
+                            <img src="{{ get_asset_url('/crf-test-2/assets/imgs/James-Carey.png')}}" alt="James Carey"
+                                loading="lazy" class="object-contain rounded-full">
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex col-span-12 lg:col-span-7 lg:justify-end">
+                    <img src="{{ get_asset_url('/crf-test-2/assets/imgs/ai-driven-bg.png')}}" alt="ai driven bg"
+                        loading="lazy" class="object-contain w-full h-auto">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% block footer %}
+    {% global_partial path="./partials/footer.html" %}
+    {% endblock footer %}
+    {{standard_footer_includes}}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{{ get_asset_url('/crf-test-2/scripts/index.js')}}"></script>
+</body>
+
+</html>

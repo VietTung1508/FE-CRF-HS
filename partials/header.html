@@ -1,0 +1,34 @@
+<!--
+    templateType: global_partial
+    isAvailableForNewContent: false
+-->
+<!-- Begin partial -->
+<header class="flex items-center justify-between bg-cf-header-bg px-[19px] py-[18px] sticky top-0"
+    style="z-index: 1000;">
+    <a href="#">
+      <img class="w-[100px] h-[40px] md:w-full md:h-full" src="{{ get_asset_url('/crf-test-2/assets/svgs/logo_header.svg')}}" alt="Logo" />
+    </a>
+
+    <nav class="hidden lg:flex bg-cf-light-white px-[39px] py-[22px] rounded-2xl gap-[30px]">
+      <div class="flex items-center text-sm text-white">
+        PLATFORM <img class="pl-[8px]" src="{{ get_asset_url('/crf-test-2/assets/svgs/plus.svg')}}" alt="Plus Icon" />
+      </div>
+      <div class="flex items-center text-sm text-white">
+        SOLUTIONS <img class="pl-[8px]" src="{{ get_asset_url('/crf-test-2/assets/svgs/plus.svg')}}" alt="Plus Icon" />
+      </div>
+      <div class="flex items-center text-sm text-white">
+        RESOURCES <img class="pl-[8px]" src="{{ get_asset_url('/crf-test-2/assets/svgs/plus.svg')}}" alt="Plus Icon" />
+      </div>
+      <div class="text-sm text-white">PRICING</div>
+    </nav>
+
+    <div class="hidden space-x-4 sm:flex">
+      <button class="px-4 py-3 text-sm text-white rounded-md bg-cf-light-white">LOGIN</button>
+      <button class="px-6 py-3 text-sm text-white transition rounded-md bg-cf-blue hover:bg-cf-blue-hover">BOOK A
+        DEMO</button>
+      <img src="{{ get_asset_url('/crf-test-2/assets/svgs/search.svg')}}" alt="Search Icon" />
+    </div>
+
+    <img src="{{ get_asset_url('/crf-test-2/assets/svgs/hambuger.svg')}}" alt="Menu Icon" class="block sm:hidden" />
+  </header>
+<!-- End partial -->
